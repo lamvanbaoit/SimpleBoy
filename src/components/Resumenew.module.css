@@ -5,7 +5,36 @@
 .content1 {
     background-color: #e8f0f2;
     min-height: 40px;
-    margin: 0 400px;
+    /* margin: 0 400px; */
+    /* margin: 0px 298px 0px 1358px; */
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+}
+
+.content2 {
+    /* background-color: #e8f0f2; */
+    /* min-height: 40px; */
+    /* margin: 0 400px; */
+    width: 11%;
+    /* margin: 0px -11px 0px 1358px; */
+    position: absolute;
+    top: 40px;
+    right: 340px;
+}
+
+.content3 {
+    color: #000;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.content4 {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-bottom: 5px;
 }
 
 .container {

@@ -17,7 +17,6 @@ import Resume from "./Resume";
 import { withTranslation } from "react-i18next";
 import Navbar from "./Navbar";
 import Inline from "./svgs/Inline";
-import Checkbox from "./Checkbox/Checkbox";
 
 
 
@@ -167,12 +166,7 @@ function Resume2({ ...props }) {
 
 
     // ---------------------------------------------------
-    const [exp, setExp] = useState(true)
-    const [pro, setPro] = useState(true)
-    const [edu, setEdu] = useState(true)
-    const [cer, setCer] = useState(true)
-    const [aw, setAw] = useState(true)
-    const [sk, setSk] = useState(true)
+
 
     const handExp = () => {
         setExp(!exp);
@@ -216,12 +210,59 @@ function Resume2({ ...props }) {
     };
 
     // ---------------------------------------------------
+    //     const [skill, setSkill] = useState(true);
+    //   const [project, setProject] = useState(true);
+    const [exp, setExp] = useState(true)
+    const [pro, setPro] = useState(true)
+    const [edu, setEdu] = useState(true)
+    const [cer, setCer] = useState(true)
+    const [aw, setAw] = useState(true)
+    const [sk, setSk] = useState(true)
+
     const options = [
-        { label: "exp 🍇", value: true },
-        { label: "pro 🥭", value: true },
-        { label: "edu 🍓", value: true },
+        { stt: 0, value: "experience", label: "Experience" },
+        { stt: 1, value: "project", label: "Project" },
+        { stt: 2, value: "education", label: "Education" },
+        { stt: 3, value: "certification", label: "Certification" },
+        { stt: 4, value: "award", label: "Award" },
+        { stt: 5, value: "skill", label: "Skill" },
     ];
-    const [selected, setSelected] = useState([]);
+
+    const [selected, setSelected] = useState(options);
+
+    const onSelectChange = (values) => {
+        setSelected(values);
+
+        setExp(false);
+        setPro(false);
+        setEdu(false);
+        setCer(false);
+        setAw(false);
+        setSk(false);
+
+        for (let i = 0; i < values.length; i++) {
+            let item = values[i];
+
+            if (item.value === "experience") {
+                setExp(true);
+            }
+            if (item.value === "project") {
+                setPro(true);
+            }
+            if (item.value === "education") {
+                setEdu(true);
+            }
+            if (item.value === "certification") {
+                setCer(true);
+            }
+            if (item.value === "award") {
+                setAw(true);
+            }
+            if (item.value === "skill") {
+                setSk(true);
+            }
+        }
+    };
     // -----------------------------------------------------
 
     return (
@@ -235,30 +276,41 @@ function Resume2({ ...props }) {
                 handDel={handDel}
             />
 
-            <Navbar
+            {/* <Navbar
                 handEdu={handEdu}
                 handCer={handCer}
                 handAw={handAw}
                 handSk={handSk}
                 handPro={handPro}
                 handExp={handExp}
-            />
+            /> */}
+            {/* 
+            <div className={styles.content3}>
+                <div id="change-color-f1">
+                    <div onclick="" className={styles.content4} style={{ backgroundColor: " B82731" }}>1</div>
+                    <div onclick="" className={styles.content4} style={{ backgroundColor: " F1A600" }}></div>
+                    <div onclick="" className={styles.content4} style={{ backgroundColor: " 008744" }}></div>
+                    <div onclick="" className={styles.content4} style={{ backgroundColor: " 113743" }}></div>
+                </div>
+            </div> */}
+
+            <div className={styles.content2}>
+                <MultiSelect
+                    options={options}
+                    value={selected}
+                    onChange={onSelectChange}
+                    labelledBy={"Select"}
+                />
+            </div>
 
             <div className={styles.content}>
                 <div className={styles.content1}>
-                    {/* <div>
-                        <div>
-                            <h1>Select Fruits</h1>
-                            <pre>{JSON.stringify(selected)}</pre>
-                            <MultiSelect
-                                options={options}
-                                value={selected}
-                                onChange={setSelected}
-                                labelledBy="Select"
-                                onClick={handSk}
-                            />
-                        </div>
-                    </div> */}
+                    {/* <MultiSelect
+                        options={options}
+                        value={selected}
+                        onChange={onSelectChange}
+                        labelledBy={"Select"}
+                    /> */}
                 </div>
                 <div ref={componentRef} className={styles.container}>
                     {/* Thông tin cá nhân */}
