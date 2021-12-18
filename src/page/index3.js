@@ -7,9 +7,9 @@ import Resumenew from '../components/Resumenew'
 const Home3 = () => {
     return (
         <>
-            <Header />
+            {/* <Header /> */}
             <Resumenew />
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }

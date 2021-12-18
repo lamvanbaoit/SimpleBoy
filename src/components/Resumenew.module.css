@@ -31,8 +31,6 @@
 }
 
 .headerBox1 {
-    /* background-color: rgb(23, 179, 82); */
-    /* flex: 1; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,7 +62,6 @@
 }
 
 .headerBox2 {
-    /* background-color: rgb(197, 41, 41); */
     flex: 1;
     display: flex;
     justify-content: center;
@@ -92,7 +89,6 @@
 }
 
 .introductionicon {
-    /* background-color: #77a5cc; */
     background-color: #555555;
     width: 28px;
     position: absolute;
@@ -101,7 +97,6 @@
 }
 
 .introductiontext {
-    /* padding-left: 30px; */
     font-size: 16px;
 }
 
@@ -120,72 +115,71 @@
     margin-top: 14px;
     position: relative;
 }
-
-.addbtn,
-.addbtn1 {
-    display: none;
-}
+/* ---------------------------------------------------- */
 
 .table:focus-within {
     outline: 1pt dashed #77a5cc;
-
-    /* background-color: #e3e3e3; */
     color: #000;
     border: none;
     outline: 1px solid #ccc;
     box-shadow: 50px 0 0px 4px #e3e3e3, -50px 0 0 4px #e3e3e3;
     z-index: 1;
     border-radius: 0.1px;
-
-    /* display: block;
-    position: absolute;
-    top: 1px;
-    left: -44px;
-
-    border: 0;
-    outline: 0;
-    border-radius: 50%;
-    width: 1.2rem;
-    height: 1.2rem;
-    color: #333;
-    font-size: 14px;
-    background-color: #77a5cc;
-    z-index: 100; */
 }
 
-.table:focus-within .addbtn1 {
-    display: block;
-    position: absolute;
-    top: 0px;
-    right: -44px;
-
-    /* border: 0;
-    outline: 0;
-    border-radius: 50%;
-    width: 1.2rem;
-    height: 1.2rem;
-    color: #333;
-    font-size: 14px;
-    background-color: #77a5cc;
-    z-index: 100; */
+.addbtn,
+.addbtn1 {
+    display: none;
 }
 
 .table:focus-within .addbtn {
     display: block;
     position: absolute;
-    top: 0px;
+    top: 4px;
     left: -48px;
+}
 
-    /* border: 0;
+.table:focus-within .addbtn1 {
+    display: block;
+    position: absolute;
+    top: 4px;
+    right: -44px;
+}
+
+.addbtn {
+    border: 0;
     outline: 0;
     border-radius: 50%;
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1.4rem;
+    height: 1.4rem;
     color: #333;
-    font-size: 14px;
-    background-color: rgb(79, 144, 205);
-    z-index: 100; */
+    font-size: 16px;
+    background-color: #e3e3e3;
+    position: absolute;
+    top: 4px;
+    right: 32px;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
+
+.addbtn1 {
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    color: #333;
+    font-size: 16px;
+    background-color: #e3e3e3;
+    position: absolute;
+    top: 4px;
+    right: 0;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+/* ---------------------------------------------------- */
 
 .table table {
     width: 100%;
@@ -214,41 +208,7 @@
     max-width: 484px;
 }
 
-.addbtn {
-    border: 0;
-    outline: 0;
-    border-radius: 50%;
-    width: 1.4rem;
-    height: 1.4rem;
-    color: #333;
-    font-size: 16px;
-    background-color: #e3e3e3;
-    position: absolute;
-    top: 2px;
-    right: 32px;
-    opacity: 1;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-.addbtn1 {
-    border: 0;
-    outline: 0;
-    border-radius: 50%;
-    width: 22px;
-    height: 22px;
-    color: #333;
-    font-size: 16px;
-    background-color: #e3e3e3;
-    position: absolute;
-    top: 2px;
-    right: 0;
-    opacity: 1;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-.addbtn2 {
+/* .addbtn2 {
     border: 0;
     outline: 0;
     border-radius: 50%;
@@ -263,7 +223,7 @@
     opacity: 1;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
-}
+} */
 
 /* ----------------------------------------------------------------------- */
 .colorScheme {

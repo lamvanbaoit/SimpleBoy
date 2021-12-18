@@ -236,6 +236,7 @@ function Resume2({ ...props }) {
 
             <div className={styles.content}>
                 <div className={styles.content1}>
+                    <div></div>
                 </div>
                 <div ref={componentRef} className={styles.container}>
                     {/* Thông tin cá nhân */}
@@ -291,18 +292,6 @@ function Resume2({ ...props }) {
 
                                             <Text2 className={styles.hover} placeholder={t('cv.work')} />
                                         </div>
-                                        {
-                                            del &&
-                                            (
-                                                <>
-                                                    <div>
-                                                        <button className={styles.addbtn} onClick={handleAddExper}>+</button>
-                                                        <button className={styles.addbtn1} onClick={handleAddExper1}>-</button>
-                                                    </div>
-                                                </>
-                                            )
-
-                                        }
                                     </div>
                                 </div>
                                 {new Array(experience).fill(1).map((_, idx) => (
@@ -345,15 +334,7 @@ function Resume2({ ...props }) {
                                         {/* <img className={styles.introductionicon} src={experienceicon} alt="experience" /> */}
                                         <div className={styles.introductiontext}>
                                             <Text2 className={styles.hover} placeholder={t('cv.pro')} />
-
                                         </div>
-                                        {
-                                            del &&
-                                            <div>
-                                                <button className={styles.addbtn} onClick={handleAddExperience}>+</button>
-                                                <button className={styles.addbtn1} onClick={handleAddExperience1}>-</button>
-                                            </div>
-                                        }
                                     </div>
                                 </div>
                                 {new Array(experienceCounter).fill(1).map((_, idx) => (
@@ -376,10 +357,7 @@ function Resume2({ ...props }) {
                                                             <td type="text" style={{ position: 'relative' }}>
                                                                 <Inline className={styles.hover} placeholder={t('cv.pro5')} />
 
-                                                                {
-                                                                    del &&
-                                                                    <button className={styles.addbtn2} onClick={Counter}>-</button>
-                                                                }
+
                                                             </td>
                                                         </tr>
 
@@ -391,10 +369,7 @@ function Resume2({ ...props }) {
                                                                 <th>{t('cv.pro6')}</th>
                                                                 <td type="text" style={{ position: 'relative' }}>
                                                                     <Inline className={styles.hover} placeholder={t('cv.pro7')} />
-                                                                    {
-                                                                        del &&
-                                                                        <button className={styles.addbtn2} onClick={Counter1}>-</button>
-                                                                    }
+
                                                                 </td>
                                                             </tr>
                                                         </>
@@ -407,10 +382,7 @@ function Resume2({ ...props }) {
                                                                 <th>{t('cv.pro8')}</th>
                                                                 <td type="text" style={{ position: 'relative' }}>
                                                                     <Inline className={styles.hover} placeholder={t('cv.pro9')} />
-                                                                    {
-                                                                        del &&
-                                                                        <button className={styles.addbtn2} onClick={Counter2}>-</button>
-                                                                    }
+
                                                                 </td>
                                                             </tr>
                                                         </>
@@ -424,10 +396,7 @@ function Resume2({ ...props }) {
                                                                 <th>{t('cv.pro10')}</th>
                                                                 <td type="text" style={{ position: 'relative' }}>
                                                                     <Inline className={styles.hover} placeholder={t('cv.pro11')} />
-                                                                    {
-                                                                        del &&
-                                                                        <button className={styles.addbtn2} onClick={Counter3}>-</button>
-                                                                    }
+
                                                                 </td>
                                                             </tr>
                                                         </>
@@ -440,10 +409,7 @@ function Resume2({ ...props }) {
                                                                 <th>{t('cv.pro12')}</th>
                                                                 <td type="text" style={{ position: 'relative' }}>
                                                                     <Inline className={styles.hover} placeholder={t('cv.pro13')} />
-                                                                    {
-                                                                        del &&
-                                                                        <button className={styles.addbtn2} onClick={Counter4}>-</button>
-                                                                    }
+
                                                                 </td>
                                                             </tr>
                                                         </>
@@ -456,10 +422,7 @@ function Resume2({ ...props }) {
                                                                 <th>{t('cv.pro14')}</th>
                                                                 <td type="text" style={{ position: 'relative' }}>
                                                                     <Inline className={styles.hover} placeholder={t('cv.pro15')} />
-                                                                    {
-                                                                        del &&
-                                                                        <button className={styles.addbtn2} onClick={Counter5}>-</button>
-                                                                    }
+
                                                                 </td>
                                                             </tr>
                                                         </>
@@ -492,13 +455,7 @@ function Resume2({ ...props }) {
                                             <Text2 className={styles.hover} placeholder={t('cv.edu')} />
 
                                         </div>
-                                        {
-                                            del &&
-                                            <div>
-                                                <button className={styles.addbtn} onClick={handleAddEducation}>+</button>
-                                                <button className={styles.addbtn1} onClick={handleAddEducation1}>-</button>
-                                            </div>
-                                        }
+
                                     </div>
                                 </div>
                                 {new Array(education).fill(1).map((_, idx) => (
@@ -536,10 +493,10 @@ function Resume2({ ...props }) {
                             </div>
                         }
 
+                        {/* CERTIFICATIONS */}
                         {
                             cer &&
                             <div>
-                                {/* CERTIFICATIONS */}
                                 <div className={styles.context}>
                                     <div className={styles.introduction}>
                                         {/* <img className={styles.introductionicon} src={certificatesicon} alt="certificates" /> */}
@@ -547,13 +504,7 @@ function Resume2({ ...props }) {
                                             <Text2 className={styles.hover} placeholder={t('cv.cer')} />
 
                                         </div>
-                                        {
-                                            del &&
-                                            <div>
-                                                <button className={styles.addbtn} onClick={handleAddCerticate}>+</button>
-                                                <button className={styles.addbtn1} onClick={handleAddCerticate1}>-</button>
-                                            </div>
-                                        }
+
                                     </div>
                                 </div>
                                 {new Array(certificate).fill(1).map((_, idx) => (
@@ -576,10 +527,10 @@ function Resume2({ ...props }) {
                             </div>
                         }
 
+                        {/* HONORS OR AWARDS */}
                         {
                             aw &&
                             <div>
-                                {/* HONORS OR AWARDS */}
                                 <div className={styles.context}>
                                     <div className={styles.introduction}>
                                         {/* <img className={styles.introductionicon} src={awardsicon} alt="awards" /> */}
@@ -587,13 +538,7 @@ function Resume2({ ...props }) {
                                             <Text2 className={styles.hover} placeholder={t('cv.aw')} />
 
                                         </div>
-                                        {
-                                            del &&
-                                            <div>
-                                                <button className={styles.addbtn} onClick={handleAddAward}>+</button>
-                                                <button className={styles.addbtn1} onClick={handleAddAward1}>-</button>
-                                            </div>
-                                        }
+
                                     </div>
                                 </div>
                                 {new Array(awards).fill(1).map((_, idx) => (
@@ -616,10 +561,10 @@ function Resume2({ ...props }) {
                             </div>
                         }
 
+                        {/* SKILLS */}
                         {
                             sk &&
                             <div>
-                                {/* SKILLS */}
                                 <div className={styles.context}>
                                     <div className={styles.introduction}>
                                         {/* <img className={styles.introductionicon} src={skillsicon} alt="skills" /> */}
@@ -627,13 +572,7 @@ function Resume2({ ...props }) {
                                             <Text2 className={styles.hover} placeholder={t('cv.sk')} />
 
                                         </div>
-                                        {
-                                            del &&
-                                            <div>
-                                                <button className={styles.addbtn} onClick={handleAddSkill}>+</button>
-                                                <button className={styles.addbtn1} onClick={handleAddSkill1}>-</button>
-                                            </div>
-                                        }
+
                                     </div>
                                 </div>
                                 {new Array(skills).fill(1).map((_, idx) => (
@@ -650,7 +589,7 @@ function Resume2({ ...props }) {
                                             </table>
 
                                             <button className={styles.addbtn} onClick={handleAddSkill}><FiPlusCircle size={28} /></button>
-                                            <button className={styles.addbtn1} onClick={handleAddSkill}><FiTrash2 size={28} /></button>
+                                            <button className={styles.addbtn1} onClick={handleAddSkill1}><FiTrash2 size={28} /></button>
                                         </div>
                                     </div>
                                 ))}
