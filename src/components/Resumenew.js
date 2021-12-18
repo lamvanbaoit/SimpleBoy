@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { MultiSelect } from "react-multi-select-component";
 import { useReactToPrint } from 'react-to-print'
 import styles from './Resumenew.module.css';
 import ProfileImage from "./svgs/ProfileImage";
@@ -16,6 +17,7 @@ import Resume from "./Resume";
 import { withTranslation } from "react-i18next";
 import Navbar from "./Navbar";
 import Inline from "./svgs/Inline";
+import Checkbox from "./Checkbox/Checkbox";
 
 
 
@@ -162,22 +164,7 @@ function Resume2({ ...props }) {
         }
     }
 
-    // -------------------------------------------------
 
-    const preset = [
-        { background: '#88E0EF' },
-        { background: '#98DDCA' },
-        { background: '#D5ECC2' },
-        { background: '#FFD384' },
-    ]
-
-    const [color, setColor] = useState({
-        background: '#88E0EF',
-    });
-
-    const changeColorScheme = (item) => {
-        setColor({ background: item.background });
-    };
 
     // ---------------------------------------------------
     const [exp, setExp] = useState(true)
@@ -211,8 +198,31 @@ function Resume2({ ...props }) {
         setSk(!sk);
     }
 
-    // ---------------------------------------------------
+    // -------------------------------------------------
 
+    const preset = [
+        { background: '#88E0EF' },
+        { background: '#98DDCA' },
+        { background: '#D5ECC2' },
+        { background: '#FFD384' },
+    ]
+
+    const [color, setColor] = useState({
+        background: '#88E0EF',
+    });
+
+    const changeColorScheme = (item) => {
+        setColor({ background: item.background });
+    };
+
+    // ---------------------------------------------------
+    const options = [
+        { label: "exp 🍇", value: true },
+        { label: "pro 🥭", value: true },
+        { label: "edu 🍓", value: true },
+    ];
+    const [selected, setSelected] = useState([]);
+    // -----------------------------------------------------
 
     return (
         <div {...props} style={{ position: 'relative' }}>
@@ -236,7 +246,19 @@ function Resume2({ ...props }) {
 
             <div className={styles.content}>
                 <div className={styles.content1}>
-                    <div></div>
+                    {/* <div>
+                        <div>
+                            <h1>Select Fruits</h1>
+                            <pre>{JSON.stringify(selected)}</pre>
+                            <MultiSelect
+                                options={options}
+                                value={selected}
+                                onChange={setSelected}
+                                labelledBy="Select"
+                                onClick={handSk}
+                            />
+                        </div>
+                    </div> */}
                 </div>
                 <div ref={componentRef} className={styles.container}>
                     {/* Thông tin cá nhân */}
