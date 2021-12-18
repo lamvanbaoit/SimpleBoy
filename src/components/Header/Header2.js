@@ -71,52 +71,8 @@ const Header2 = (props) => {
                 </div>
             </section>
 
-            {/* <!-----service section start-----------> */}
-            {/* <div className={styles.service} >
-                <div className={styles.title}>
-                    <h2>Our Services</h2>
-                </div>
 
-                <div className={styles.box}>
-                    <div className={styles.card}>
-                        <i className="fas fa-bars"></i>
-                        <h5>Step 01</h5>
-                        <div className={styles.pra}>
-                            <p>Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible.</p>
-
-                            <p style={{ textAlign: "center" }}>
-
-                                Read More
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className={styles.card}>
-                        <i className="far fa-user"></i>
-                        <h5>Step 02</h5>
-                        <div className={styles.pra}>
-                            <p>Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible.</p>
-
-                            <p style={{ textAlign: "center" }}>
-                                Read More
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className={styles.card}>
-                        <i className="far fa-bell"></i>
-                        <h5>Step 03</h5>
-                        <div className={styles.pra}>
-                            <p>Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible.</p>
-
-                            <p style={{ textAlign: "center" }}>
-                                Read More
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
-
+            {/* service */}
             <div className={styles.service}>
                 <div className={styles.title}>
                     <h2>{t('home.a12')}</h2>
@@ -152,6 +108,7 @@ const Header2 = (props) => {
                     </section>
                 </section>
             </div>
+
 
             <div className={styles.service}>
                 <section className={styles.effortlesslyblock}>
