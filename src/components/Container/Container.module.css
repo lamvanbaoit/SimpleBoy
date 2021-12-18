@@ -1,0 +1,37 @@
+.container {
+    /* background-color: rgb(201, 110, 110); */
+}
+
+.template {
+}
+
+.caption {
+    border-bottom: 1px solid #1dbfaf;
+    margin: 32px 0 12px 0;
+    font-weight: 600;
+    color: #6f707b;
+    padding: 3px 0;
+}
+
+.caption span {
+    font-family: "Quicksand", sans-serif;
+}
+
+.image {
+    color: #007bff;
+    background-color: transparent;
+}
+
+.image:hover {
+    color: #0056b3;
+}
+
+.image img {
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
+    transition: box-shadow 500ms;
+    width: 100%;
+}
+
+.image img:hover {
+    box-shadow: 0 30px 50px 0 rgb(0 0 0 / 50%);
+}

@@ -1,0 +1,220 @@
+.content {
+    background-color: #e8f0f2;
+}
+
+.content1 {
+    background-color: #e8f0f2;
+    min-height: 40px;
+}
+
+.container {
+    min-height: 297mm;
+    width: 210mm;
+    background: #fff;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 20px 0;
+}
+
+.container1 {
+    max-height: 297mm;
+    width: 210mm;
+    background: rgb(218, 42, 42);
+    margin: 30px auto;
+    box-sizing: border-box;
+    padding: 20px 0;
+}
+
+.aaa {
+    padding: 0 22px;
+}
+
+.hover:hover {
+    outline: 1pt dashed #77a5cc;
+}
+
+.headerBox {
+    min-height: 154px;
+    display: flex;
+    padding: 0 22px;
+}
+
+.headerBox1 {
+    /* background-color: rgb(23, 179, 82); */
+    /* flex: 1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 7px;
+    line-height: 30px;
+}
+
+.name {
+    font-size: 32px;
+    max-width: 369px;
+}
+
+.name:hover {
+    outline: 1pt dashed #77a5cc;
+}
+
+.apply {
+    font-size: 18px;
+    max-width: 369px;
+}
+
+.apply:hover {
+    outline: 1pt dashed #77a5cc;
+}
+
+.headerBox2 {
+    /* background-color: rgb(197, 41, 41); */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    font-size: 13px;
+    line-height: 22px;
+}
+
+.infogeneral {
+    max-width: 268px;
+}
+
+/* ------------------------------------------------------ */
+.context {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 18px;
+}
+
+.introduction {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.introductionicon {
+    /* background-color: rgb(79, 144, 205); */
+    background-color: #555555;
+    width: 28px;
+    position: absolute;
+    top: -2px;
+    left: 0px;
+}
+
+.introductiontext {
+    padding-left: 30px;
+    font-size: 16px;
+}
+
+.introductiontext:after {
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1.5px;
+    background: #d5d6d6;
+}
+
+.table {
+    margin-top: 20px;
+    position: relative;
+}
+
+.table table {
+    width: 100%;
+    border-top: 1px dashed #ccc;
+    margin-top: 10px;
+}
+
+.table th {
+    vertical-align: middle;
+    width: 33.3333333333%;
+    font-weight: 700;
+    text-align: left;
+    padding: 5px;
+    border-bottom: 1px dashed #ccc;
+    border-right: 1px dashed #ccc;
+    max-width: 236px;
+}
+
+.table td {
+    vertical-align: middle;
+    width: 100%;
+    text-align: left;
+    padding: 5px;
+    border-bottom: 1px dashed #ccc;
+    max-width: 484px;
+}
+
+.addbtn {
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+    width: 1.4rem;
+    height: 1.4rem;
+    color: #333;
+    font-size: 16px;
+    background-color: rgb(79, 144, 205);
+    position: absolute;
+    top: 2px;
+    right: 32px;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.addbtn1 {
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    color: #333;
+    font-size: 16px;
+    background-color: rgb(79, 144, 205);
+    position: absolute;
+    top: 2px;
+    right: 0;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.addbtn2 {
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    color: #333;
+    font-size: 16px;
+    background-color: rgb(79, 144, 205);
+    position: absolute;
+    top: 4px;
+    right: 0;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+/* ----------------------------------------------------------------------- */
+.colorScheme {
+    height: 20px;
+    width: 20px;
+    border-radius: 25px;
+    margin: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: ease-in-out 200ms;
+}

@@ -1,0 +1,25 @@
+.header {
+    /* background-color: #0f044c; */
+    background-image: linear-gradient(to bottom right, #3d56b2, #0f044c);
+}
+
+.header__logo {
+    font-size: 18px;
+    padding: 5px 0;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2px;
+}
+
+.header__logo img {
+    /* width: 40px; */
+    vertical-align: middle;
+}
+
+.header__logo span {
+    margin-left: 4px;
+    color: #fff;
+    font-weight: 500;
+}
