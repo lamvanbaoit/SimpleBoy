@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { Link } from 'react-router-dom';
 import { MultiSelect } from "react-multi-select-component";
 import { useReactToPrint } from 'react-to-print'
 import styles from './Resumenew.module.css';
@@ -12,7 +13,7 @@ import Text2 from "./svgs/Text2";
 // import certificatesicon from '../img/certificates.png';
 // import awardsicon from '../img/awards.png';
 // import skillsicon from '../img/skills.png';
-import { FiPlusCircle, FiTrash2, FiDownload } from "react-icons/fi";
+import { FiPlusCircle, FiTrash2, FiDownload, FiHome } from "react-icons/fi";
 import Resume from "./Resume";
 import { withTranslation } from "react-i18next";
 import Navbar from "./Navbar";
@@ -284,18 +285,9 @@ function Resume2({ ...props }) {
                 handPro={handPro}
                 handExp={handExp}
             /> */}
-            {/* 
-            <div className={styles.content3}>
-                <div id="change-color-f1">
-                    <div onclick="" className={styles.content4} style={{ backgroundColor: " B82731" }}>1</div>
-                    <div onclick="" className={styles.content4} style={{ backgroundColor: " F1A600" }}></div>
-                    <div onclick="" className={styles.content4} style={{ backgroundColor: " 008744" }}></div>
-                    <div onclick="" className={styles.content4} style={{ backgroundColor: " 113743" }}></div>
-                </div>
-            </div> */}
 
 
-            <div className={styles.content3}>
+            {/* <div className={styles.content3}>
                 <ul className='sub-menu' tabIndex={1}>
                     <FiDownload onClick={handlePrint} size={28} />
                     {preset.map((item, key) => (
@@ -319,17 +311,42 @@ function Resume2({ ...props }) {
                     onChange={onSelectChange}
                     labelledBy={"Select"}
                 />
-            </div>
+            </div> */}
 
             <div className={styles.content}>
                 <div className={styles.content1}>
-                    {/* <MultiSelect
-                        options={options}
-                        value={selected}
-                        onChange={onSelectChange}
-                        labelledBy={"Select"}
-                    /> */}
+                    <Link to="/" style={{ paddingLeft: 25 }}>
+                        <FiHome style={{ color: '000' }} size={28} />
+                    </Link>
+
+                    <div className={styles.content3}>
+                        <ul className='sub-menu' tabIndex={1}>
+                            <FiDownload onClick={handlePrint} size={28} />
+                            {preset.map((item, key) => (
+                                <li
+                                    key={key}
+                                    className='btn'
+                                    onClick={() => changeColorScheme(item)}
+                                    style={{ backgroundColor: `${item.background}` }}
+                                    data-label={key}
+                                >
+                                </li>
+                            ))}
+                        </ul>
+
+                    </div>
+
+                    <div className={styles.content2}>
+                        <MultiSelect
+                            options={options}
+                            value={selected}
+                            onChange={onSelectChange}
+                            labelledBy={"Select"}
+                        />
+                    </div>
+
                 </div>
+
                 <div ref={componentRef} className={styles.container}>
                     {/* Thông tin cá nhân */}
                     <div className={styles.headerBox} style={{ backgroundColor: `${color.background}` }}>

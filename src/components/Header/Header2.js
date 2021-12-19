@@ -29,8 +29,8 @@ const Header2 = (props) => {
                     <ul>
 
                         <li><Link className={styles.Link1} to="/"> {t('home.a1')} </Link></li>
-                        <li>{t('home.about')}</li>
-                        <li>{t('home.service')}</li>
+                        {/* <li>{t('home.about')}</li>
+                        <li>{t('home.service')}</li> */}
                         <li><Link className={styles.Link1} to="/resumenew">{t('home.a2')}</Link></li>
                         <li><Link className={styles.Link1} to="/letter">{t('home.a3')}</Link></li>
                     </ul>
@@ -172,18 +172,21 @@ const Header2 = (props) => {
                     <div className={styles.footer11}>{t('home.a27')}</div>
 
                 </div>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td><img src={idtek} alt="" /></td>
-                            <td><img src={nus} alt="" /></td>
-                            <td><img src={tdtu} alt="" /></td>
-                            <td><img src={tdtu} alt="" /></td>
-                            <td><img src={tdtu} alt="" /></td>
-                        </tr>
 
-                    </tbody>
-                </table>
+                <div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><img src={idtek} alt="" /></td>
+                                <td><img src={nus} alt="" /></td>
+                                <td><img src={tdtu} alt="" /></td>
+                                <td><img src={tdtu} alt="" /></td>
+                                <td><img src={tdtu} alt="" /></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
                 <div className={styles.footer1}>{t('home.a28')}</div>
             </footer>
         </>
