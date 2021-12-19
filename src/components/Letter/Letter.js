@@ -4,6 +4,9 @@ import styles from './Letter.module.css';
 import Text from "../svgs/Text";
 import Resume from "../Resume3";
 import { withTranslation } from "react-i18next";
+import { FiPlusCircle, FiTrash2, FiDownload, FiHome } from "react-icons/fi";
+import { Link } from 'react-router-dom';
+
 
 
 function Letter({ ...props }) {
@@ -36,16 +39,46 @@ function Letter({ ...props }) {
     return (
         <div {...props} style={{ position: 'relative' }}>
 
-            <Resume
+            {/* <Resume
                 color={color}
                 preset={preset}
                 changeColorScheme={changeColorScheme}
                 handlePrint={handlePrint}
             />
-
+ */}
 
             <div className={styles.content}>
                 <div className={styles.content1}>
+
+
+
+
+
+
+                    <Link to="/" style={{ paddingLeft: 25 }}>
+                        <FiHome style={{ color: '000' }} size={28} />
+                    </Link>
+
+                    <div className={styles.content3}>
+                        <ul className='sub-menu' tabIndex={1}>
+                            <FiDownload onClick={handlePrint} size={28} />
+                            {preset.map((item, key) => (
+                                <li
+                                    key={key}
+                                    className='btn'
+                                    onClick={() => changeColorScheme(item)}
+                                    style={{ backgroundColor: `${item.background}` }}
+                                    data-label={key}
+                                >
+                                </li>
+                            ))}
+                        </ul>
+
+                    </div>
+
+
+
+
                 </div>
                 <div ref={componentRef} className={styles.container}>
                     <div className={styles.headerBox} style={{ backgroundColor: `${color.background}` }}>

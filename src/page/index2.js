@@ -7,9 +7,9 @@ import Letter from '../components/Letter/Letter'
 const Home1 = () => {
     return (
         <>
-            <Header />
+            {/* <Header /> */}
             <Letter />
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }
