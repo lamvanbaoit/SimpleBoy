@@ -47,7 +47,7 @@ const Wrapper = styled.div`
         align-items: center;
         justify-content: center;
         transition: opacity, transform 0.3s ease;
-        opacity: 0;
+        opacity: 1;
         visibility: hidden;
         transform: translate(-150%, -50%);
 
